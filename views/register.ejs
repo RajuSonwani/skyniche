@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">        
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="https://skyniche.com/" class="navbar-brand">Sky<b>Niche</b></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+            <div class="navbar-nav">
+                <a href="#" class="nav-item nav-link">Register</a>
+            </div>
+        </div>
+        <div class="navbar-nav ml-auto action-buttons">
+            <div class="nav-item dropdown">
+                <a href="/register/clients" class="btn btn-primary  mr-4">Clients</a>
+            </div>
+        </div>
+    </nav>
+
+    <% if (msg) { %>
+        <script> alert( `<%= msg %>`) </script> 
+   <% } %>
+
+    <div class="container">
+        <div class="login-form">
+            <div class="main-div">
+                <div class="panel">
+                    <h2>Add Clients</h2>
+                    <p>please fill your credential carefully</p>
+                </div>
+                <form action="/register/add" target="_blank" enctype="multipart/form-data" method="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="User's Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="phone" class="form-control" name="phone" placeholder="User's Mobile" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="pass" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="address" placeholder="Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="profile_pic">
+                     </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <div style="background-color: rgb(54, 51, 51); height:2px;"></div>
+                <p style="margin-top: 1rem;font-weight: bolder;"> Have a Good day!</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+  
+    <!-- bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+
+</html>
